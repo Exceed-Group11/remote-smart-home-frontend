@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: gainsboro;
+  font-family: 'Changa', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  background-color: orange;
   display: flex;
-  flex-direction: column;
+  height: 60px;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100vw;
+  padding: 8px 12px;
+}
+
+.btn-add-remote {
+  background-color: royalblue;
+  padding: 0.25rem 0.75rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card-list {
+  padding: 1.5rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card {
+  border-radius: 10%;
+  border: 5px solid black;
+  height: 350px;
+  width: 250px;
+  background-color: burlywood;
+  position: relative;
+}
+
+.card h1 {
+  margin: auto;
+  text-align: center;
+  padding: 2rem;
+}
+
+.btn-remote-add {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  left: 2.5rem;
+}
+
+.plus {
+  font-size: 400%;
+}
+
+.card h3 {
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.btn-remote-remove {
+  position: absolute;
+  top: 1rem;
+  right: 0.5rem;
+}
+
+.description-box {
+  border: 2px solid black;
+  width: 200px;
+  height: 150px;
+  margin-left: 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.description-box h3 {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.btn-power {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /* border: 2px solid gray; */
+  left: 4rem;
+  /* background-color: red; */
+}
+
+.power {
+  font-size: 300%;
 }
