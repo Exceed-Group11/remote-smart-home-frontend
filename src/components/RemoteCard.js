@@ -5,13 +5,10 @@ const RemoteCard = () => {
   return (
     <div>
         <div className='card'>
-            <h3>Remote No</h3>
             <button className='btn-remote-remove'>
                 Remove Remote
             </button>
-            <div className='description-box'>
-                <h3>Description</h3>
-            </div>
+            <h2>Remote Name</h2>
             <button className='btn-power'>
                 <FaPowerOff className='power'/>
             </button>

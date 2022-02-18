@@ -2,14 +2,14 @@ import React from 'react'
 import { useAuth } from './AuthProvider'
 
 
-const Navbar = () => {
+const Navbar = (props) => {
   const { logout } = useAuth()
   return (
     <nav>
-        <h1>Temporary NavBar</h1>
-        <button onClick={logout} className='btn-add-remote'>
+        <h1>Remote Smart Home</h1>
+        {props.isHome && <button onClick={logout} className='btn-add-remote'>
             logout
-        </button>
+        </button>}
     </nav>
   )
 }

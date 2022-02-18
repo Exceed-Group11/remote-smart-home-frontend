@@ -31,7 +31,7 @@ nav {
   padding: 1.5rem;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 2rem;
 }
 
@@ -47,7 +47,7 @@ nav {
 .card h1 {
   margin: auto;
   text-align: center;
-  padding: 2rem;
+  margin: 1.75rem;
 }
 
 .btn-remote-add {
@@ -56,47 +56,141 @@ nav {
   height: 150px;
   border-radius: 50%;
   left: 2.5rem;
+  border: 3px solid black;
 }
 
 .plus {
   font-size: 400%;
 }
 
-.card h3 {
-  padding-left: 1rem;
-  padding-top: 1rem;
+.card h2 {
+  text-align: center;
+  margin: 2rem auto;
 }
 
 .btn-remote-remove {
-  position: absolute;
-  top: 1rem;
-  right: 0.5rem;
-}
-
-.description-box {
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  margin: 1rem 68px 1rem;
+  background-color: red;
+  font-weight: bold;
+  color: white;
   border: 2px solid black;
-  width: 200px;
-  height: 150px;
-  margin-left: 20px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.description-box h3 {
-  text-align: center;
-  padding-top: 50px;
 }
 
 .btn-power {
-  position: absolute;
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  /* border: 2px solid gray; */
-  left: 4rem;
-  /* background-color: red; */
+  margin: 0 68px;
+  border: 3px solid black;
 }
 
 .power {
   font-size: 300%;
+}
+
+.return-po {
+  width: 100px;
+  /* border: 1px solid gray; */
+  margin: 2rem auto 2rem;
+}
+
+.btn-return {
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+  border: 3px solid black;
+}
+
+.add-form-card {
+  width: 400px;
+  height: 300px;
+  border: 5px solid black;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.add-form-card h2 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.add-form-card h4 {
+  padding: 1rem;
+}
+
+.input-name {
+  width: 350px;
+  height: 25px;
+  margin-left: 15px;
+}
+
+.btn-add {
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+  margin-top: 2rem;
+  margin-left: 140px;
+  border: 3px solid black;
+}
+
+.login-title {
+  text-align: center;
+}
+
+.container {
+  border: 5px solid black;
+  border-radius: 10px;
+  width: 750px;
+  height: 500px;
+  display: flex;
+  margin-left: 24%;
+  margin-top: 2%;
+}
+
+.pic {
+  /* border: 3px solid gray; */
+  width: 400px;
+  height: 490px;
+}
+
+.form {
+  /* border: 3px solid gray; */
+  width: 350px;
+  height: 490px;
+  text-align: center;
+}
+
+.form h1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.login-box {
+  width: 225px;
+  height: 20px;
+}
+
+.btn-login {
+  background-color: aquamarine;
+  border-radius: 20px;
+  width: 225px;
+  height: 40px;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  border: 3px solid blue;
+}
+
+.login-de {
+  margin-left: -9rem;
+}
+
+.login-op {
+  margin-left: -5rem;
+}
+
+.login-op-id {
+  margin-left: -7.5rem;
 }
