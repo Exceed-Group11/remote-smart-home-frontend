@@ -9,3 +9,4 @@
 1. ใส่ function toggle ให้ปุ่ม power on/off
 2. ทำการแสดงสถานะ on/off ของปุ่ม power ณ ปัจจุบัน
 3. ตกแต่ง
+4. หน้า Add form (สำคัญ) 
