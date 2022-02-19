@@ -4,8 +4,12 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import AddForm from './pages/AddForm';
+import { getSessionId }  from './utils/cookie_util.js';
+
 
 function App() {
+
+  getSessionId();
   return (
     <BrowserRouter>
       <Routes>

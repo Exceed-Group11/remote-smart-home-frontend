@@ -1,14 +1,14 @@
 import React from 'react'
 import { FaPowerOff } from 'react-icons/fa'
 
-const RemoteCard = () => {
+const RemoteCard = ({ remote, onDelete }) => {
   return (
     <div>
         <div className='card'>
-            <button className='btn-remote-remove'>
+            <button className='btn-remote-remove' onClick={() => onDelete(remote.remoteId)} >
                 Remove Remote
             </button>
-            <h2>Remote Name</h2>
+            <h2>{remote.remoteName}</h2>
             <button className='btn-power'>
                 <FaPowerOff className='power'/>
             </button>

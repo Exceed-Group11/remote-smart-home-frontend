@@ -183,6 +183,16 @@ nav {
   border: 3px solid blue;
 }
 
+.btn-register {
+  background-color: aquamarine;
+  border-radius: 20px;
+  width: 225px;
+  height: 40px;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  border: 3px solid blue;
+}
+
 .login-de {
   margin-left: -9rem;
 }
