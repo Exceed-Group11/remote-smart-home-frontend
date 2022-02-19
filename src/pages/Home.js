@@ -31,6 +31,12 @@ const Home = () => {
     })
   }
 
+  const onToggleRemote = (id) => {
+    onToggleRemote(id).then(() => {
+      space
+    })
+  }
+
   return (
     <div>
       <Navbar />
@@ -40,6 +46,7 @@ const Home = () => {
             <RemoteCard
               key={remote.remoteId}
               remote={remote}
+              onToggle={onToggleRemote}
               onDelete={onDeleteRemote}
             />
         ))}

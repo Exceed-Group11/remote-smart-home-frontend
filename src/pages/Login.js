@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import Navbar from '../components/NavBar'
 import { getObjForm } from '../utils/form';
 import { login } from '../services/auth';
 import { useNavigate } from 'react-router-dom';
-// import { setStatus } from '../services/UserStatus'
+import Alert from '../components/Alert';
+
 
 const Login = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-  const [error, setError] = useState({})
+  const [error, setError] = useState()
   const navigate = useNavigate()
 
   // const { setUserInfo } = useAuth()
@@ -24,27 +25,25 @@ const Login = () => {
         // setUserInfo(data.user)
         navigate('/home')
       })
-      .catch(() => {
+      .catch((resError) => {
         console.log("Login Error.")
-        // setError(resError.response.data)
+        setError(resError.response.data)
       })
   }
 
   return (
-    <div>
+    <div className='login-page'>
       <Navbar />
-      <div className='container' onSubmit={handleSubmit}>
-        <div className='form'>
-          <h1>Login</h1>
-          <form className='login-form'>
-            <h4 className='login-box'>Username :</h4>
-            <input type="text" placeholder='username' name='username' onChange={(e) => setUsername(e.target.value)}/>
-            <h4 className='login-box'>Password :</h4>
-            <input type="password" placeholder='password' name='password' onChange={(e) => setPassword(e.target.value)}/>
-            <button className='btn-login' type='submit'>Login</button>     
-          </form>
-        </div>
-          <Link to='/register'>Register</Link>
+      <div className='login-container' onSubmit={handleSubmit}>
+        <h1>Login</h1>
+        {error && <Alert isLogin={true} />}
+        <form className='login-form'>
+          <h4 className='login-usr'>Username :</h4>
+          <input type="text" placeholder='username' name='username' className='login-box' onChange={(e) => setUsername(e.target.value)}/>
+          <h4 className='login-pass'>Password :</h4>
+          <input type="password" placeholder='password' name='password' className='login-box' onChange={(e) => setPassword(e.target.value)}/>
+        </form>
+        <button className='btn-login' type='submit'>Login</button>
       </div>
     </div>
   )

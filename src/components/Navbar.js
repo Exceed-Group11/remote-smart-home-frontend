@@ -34,10 +34,10 @@ const NavBar = () => {
       return (
       <Navbar className='navbar-orange'>
         <Container>
-          <Navbar.Brand>
+          <Navbar.Brand className='fs-2'>
             Remote กระติ๊บมหัศจรรย์
           </Navbar.Brand>
-          <Nav className="justify-content-end flex-grow-1 pe-3">
+          <Nav className="justify-content-end flex-grow-1 pe-3 fs-5">
             <button onClick={logout} className='btn-add-remote'>Logout</button>
           </Nav>
         </Container>
@@ -47,10 +47,10 @@ const NavBar = () => {
     return (
       <Navbar className='navbar-orange'>
         <Container>
-          <Navbar.Brand>
+          <Navbar.Brand className='fs-2'>
             Remote กระติ๊บมหัศจรรย์
           </Navbar.Brand>
-          <Nav className="justify-content-end flex-grow-1 pe-3">
+          <Nav className="justify-content-end flex-grow-1 pe-3 fs-5">
             <Nav.Link href="/">Login</Nav.Link>
             <Nav.Link href="/register">Register</Nav.Link>
           </Nav>
@@ -60,12 +60,5 @@ const NavBar = () => {
   }
 
 }
-
-    // <Navbar bg="orange">
-    //   <Container>
-    //     <Navbar.Brand href="#home">Remote กระติ๊บมหัศจรรย์</Navbar.Brand>
-    //   </Container>
-    // </Navbar>
-
 
 export default NavBar

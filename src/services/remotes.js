@@ -1,10 +1,6 @@
 import axios from 'axios'
 import { getSessionId } from '../utils/cookie_util'
 
-export async function getRemote() {
-    const response = await axios.get('https://ecourse.cpe.ku.ac.th/exceed11/api/remote/all/structure/')
-    return response.data
-  }
 
 export async function getRemoteById(id) {
     const response = await axios.get(`https://ecourse.cpe.ku.ac.th/exceed11/api/remote/${id}/structure/`)
@@ -32,17 +28,6 @@ export async function getRemoteStatusById(id) {
         }
     })
     return response.data
-}
-
-export async function generateRemote(id) {
-    let sessionId = getSessionId()
-    axios({
-        method: 'POST',
-        url: `https://ecourse.cpe.ku.ac.th/exceed11/api/remote/${id}/generate/`,
-        headers: {
-            "Authorization": `Bearer ${sessionId}`
-        },
-    })
 }
 
 export async function sendRemoteAction(id) {
