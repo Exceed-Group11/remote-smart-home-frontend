@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link} from 'react-router-dom'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/NavBar'
 import { useState } from 'react'
 import { getObjForm } from '../utils/form';
 import { register } from '../services/auth';

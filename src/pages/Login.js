@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/NavBar'
 import { getObjForm } from '../utils/form';
 import { login } from '../services/auth';
 import { useNavigate } from 'react-router-dom';
+// import { setStatus } from '../services/UserStatus'
 
 const Login = () => {
   const [username, setUsername] = useState('')
@@ -23,7 +24,7 @@ const Login = () => {
         // setUserInfo(data.user)
         navigate('/home')
       })
-      .catch((resError) => {
+      .catch(() => {
         console.log("Login Error.")
         // setError(resError.response.data)
       })

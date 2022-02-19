@@ -32,14 +32,3 @@ export async function logout() {
     window.location.assign('/')
 }
 
-export async function getUserInfo() {
-    let sessionId = getSessionId()
-    const response = await axios({
-        method: 'GET',
-        url: 'https://ecourse.cpe.ku.ac.th/exceed11/api/user/',
-        headers: {
-            "Authorization": `Bearer ${sessionId}`
-        }
-    })
-    return response.data
-}

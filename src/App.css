@@ -11,16 +11,6 @@ body {
   font-family: 'Changa', sans-serif;
 }
 
-nav {
-  background-color: orange;
-  display: flex;
-  height: 60px;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
-  padding: 8px 12px;
-}
-
 .btn-add-remote {
   background-color: royalblue;
   padding: 0.25rem 0.75rem;
@@ -140,7 +130,7 @@ nav {
   text-align: center;
 }
 
-.container {
+/* .container {
   border: 5px solid black;
   border-radius: 10px;
   width: 750px;
@@ -148,7 +138,7 @@ nav {
   display: flex;
   margin-left: 24%;
   margin-top: 2%;
-}
+} */
 
 .pic {
   /* border: 3px solid gray; */
@@ -203,4 +193,9 @@ nav {
 
 .login-op-id {
   margin-left: -7.5rem;
+}
+
+.navbar-orange {
+  background-color: orange;
+  color: black;
 }
