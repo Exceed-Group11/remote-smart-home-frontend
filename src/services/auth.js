@@ -1,25 +1,14 @@
 import axios from 'axios';
 import { getSessionId } from '../utils/cookie_util';
-import { useNavigate } from 'react-router-dom';
 
 
 export async function login(username, password) {
     let sessionId = getSessionId();
-    // axios({
-    //     method: 'POST',
-    //     headers: {
-    //         "Authorization": "Bearer {SessionId}"
-    //     },
-    //     data: {
-
-    //     }
-    // })
     const res = await axios.post('https://ecourse.cpe.ku.ac.th/exceed11/api/user/signin/', {
         "username": username,
         "password": password,
         "token": sessionId
     })
-    return true
 }
 
 export async function register(username, password, hardwareId) {
@@ -41,4 +30,16 @@ export async function logout() {
     })
     console.log("Logged Out Success")
     window.location.assign('/')
+}
+
+export async function getUserInfo() {
+    let sessionId = getSessionId()
+    const response = await axios({
+        method: 'GET',
+        url: 'https://ecourse.cpe.ku.ac.th/exceed11/api/user/',
+        headers: {
+            "Authorization": `Bearer ${sessionId}`
+        }
+    })
+    return response.data
 }
