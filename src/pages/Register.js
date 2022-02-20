@@ -14,7 +14,7 @@ const Register = () => {
   const [hardwareId, setHardwareId] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
 
-  const [error, setError] = useState({})
+  const [error, setError] = useState()
   const navigate = useNavigate()
   // const { setUserInfo } = useAuth()
 

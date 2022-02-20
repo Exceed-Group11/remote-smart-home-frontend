@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { getSessionId } from '../utils/cookie_util'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
+
 
 const RemoteAddForm = () => {
   const [remoteStructure, setRemoteStructure] = useState([])
   const [selectedId, setSelectedId] = useState(0)
   const [remoteName, setRemoteName] = useState('')  
+  const navigate = useNavigate()
 
 
   async function generateRemote(id, remoteName) {
@@ -38,6 +41,8 @@ const RemoteAddForm = () => {
   const formHandler = (e) => {
     e.preventDefault()
     generateRemote(remoteStructure[selectedId]["remoteId"], remoteName)
+    navigate('/home')
+    window.location.reload()
   }
 
   return (
