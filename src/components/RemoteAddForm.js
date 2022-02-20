@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getSessionId } from '../utils/cookie_util'
 import axios from 'axios'
-import { FaOptinMonster } from 'react-icons/fa'
 
 const RemoteAddForm = () => {
   const [remoteStructure, setRemoteStructure] = useState([])
