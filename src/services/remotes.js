@@ -18,14 +18,3 @@ export async function deleteRemote(id) {
     })
 }
 
-export async function getRemoteStatusById(id) {
-    let sessionId = getSessionId()
-    const response = await axios({
-        method: 'GET',
-        url: `https://ecourse.cpe.ku.ac.th/exceed11/api/remote/${id}/`,
-        headers: {
-            "Authorization": `Bearer ${sessionId}`
-        }
-    })
-    return response.data
-}

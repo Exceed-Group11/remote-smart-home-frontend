@@ -8,7 +8,8 @@ import { getSessionId } from '../utils/cookie_util'
 
 const Home = () => {
   const [remotes, setRemotes] = useState([])
-  const [remoteState, setRemoteState] = useState(0)
+  const [remoteState, setRemoteState] = useState(false)
+  let a = false;
 
   useEffect(() => {
     getRemoteStatus()
@@ -26,6 +27,19 @@ const Home = () => {
     setRemotes(response.data)
 }
 
+async function getRemoteStatusById(id) {
+  let sessionId = getSessionId()
+  const response = await axios({
+      method: 'GET',
+      url: `https://ecourse.cpe.ku.ac.th/exceed11/api/remote/${id}/`,
+      headers: {
+          "Authorization": `Bearer ${sessionId}`
+      }
+  })
+ await  setRemoteState(response.data.structure["0"].state)
+ a = response.data.structure["0"].state;
+}
+
   const onDeleteRemote = (id) => {
     deleteRemote(id).then(() => {
       setRemotes(remotes => remotes.filter((remote) => remote.remoteId !== id))
@@ -33,20 +47,42 @@ const Home = () => {
   }
 
 
-  async function sendRemoteAction(id) {
+  async function sendRemoteAction(id, state) {
     let sessionId = getSessionId()
-    axios({
+   return  axios({
         method: 'POST',
-        url: `https://ecourse.cpe.ku.ac.th/exceed11/api/remote/${id}/button/0`,
+        url: `https://ecourse.cpe.ku.ac.th/exceed11/api/remote/${id}/button/0/`,
         headers: {
             "Authorization": `Bearer ${sessionId}`
+        },
+        data: {
+          "state": state
         }
   })
 }
 
-  const onToggleRemote = (id) => {
-    sendRemoteAction(id).then(() => {
+  const onToggleRemote = async  (id) => {
+    await getRemoteStatusById(id)
+    let status = a === remoteState ? !remoteState : remoteState;
+    return sendRemoteAction(id, status).then(() => {
       setRemotes(remotes => remotes.filter((remote) => remote.remoteId === id))
+      console.log('Send Success.')
+      setRemoteState(status)
+      a = !a;
+      window.location.reload()
+    }).catch((e) => {
+        console.error(e)
+        switch (e.response.status) {
+          case 504:
+            alert('Hardware not responding.')
+            break;
+          case 401:
+            alert("Unauthorized access")
+            break;
+          default: 
+          // alert('Unknown error.')
+            break;
+        }
     })
   }
 

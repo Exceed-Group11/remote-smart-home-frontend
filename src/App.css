@@ -18,7 +18,7 @@
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 8.5rem;
+  gap: 7rem;
 }
 
 .remote-card {
@@ -26,7 +26,7 @@
   background: burlywood;
   text-align: center;
   height: 400px;
-  width: 350px;
+  width: 250px;
 }
 
 .remote-card h1 {
