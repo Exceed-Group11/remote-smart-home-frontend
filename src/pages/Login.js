@@ -34,16 +34,16 @@ const Login = () => {
   return (
     <div className='login-page'>
       <Navbar />
-      <div className='login-container' onSubmit={handleSubmit}>
+      <div className='login-container'>
         <h1>Login</h1>
         {error && <Alert isLogin={true} />}
-        <form className='login-form'>
+        <form className='login-form' onSubmit={handleSubmit}>
           <h4 className='login-usr'>Username :</h4>
           <input type="text" placeholder='username' name='username' className='login-box' onChange={(e) => setUsername(e.target.value)}/>
           <h4 className='login-pass'>Password :</h4>
           <input type="password" placeholder='password' name='password' className='login-box' onChange={(e) => setPassword(e.target.value)}/>
+          <button className='btn-login' type='submit'>Login</button>
         </form>
-        <button className='btn-login' type='submit'>Login</button>
       </div>
     </div>
   )

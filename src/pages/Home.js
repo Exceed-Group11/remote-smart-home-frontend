@@ -8,6 +8,7 @@ import { getSessionId } from '../utils/cookie_util'
 
 const Home = () => {
   const [remotes, setRemotes] = useState([])
+  const [remoteState, setRemoteState] = useState(0)
 
   useEffect(() => {
     getRemoteStatus()
@@ -31,9 +32,21 @@ const Home = () => {
     })
   }
 
+
+  async function sendRemoteAction(id) {
+    let sessionId = getSessionId()
+    axios({
+        method: 'POST',
+        url: `https://ecourse.cpe.ku.ac.th/exceed11/api/remote/${id}/button/0`,
+        headers: {
+            "Authorization": `Bearer ${sessionId}`
+        }
+  })
+}
+
   const onToggleRemote = (id) => {
-    onToggleRemote(id).then(() => {
-      space
+    sendRemoteAction(id).then(() => {
+
     })
   }
 

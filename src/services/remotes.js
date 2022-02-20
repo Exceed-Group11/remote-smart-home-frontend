@@ -29,14 +29,3 @@ export async function getRemoteStatusById(id) {
     })
     return response.data
 }
-
-export async function sendRemoteAction(id) {
-    let sessionId = getSessionId()
-    axios({
-        method: 'POST',
-        url: `https://ecourse.cpe.ku.ac.th/exceed11/api/remote/${id}/button/0`,
-        headers: {
-            "Authorization": `Bearer ${sessionId}`
-        }
-    })
-}

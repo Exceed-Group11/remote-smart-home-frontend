@@ -92,6 +92,7 @@
   border: 5px solid black;
   border-radius: 10px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .add-form-card h2 {
@@ -114,7 +115,6 @@
   height: 50px;
   border-radius: 20px;
   margin-top: 2rem;
-  margin-left: 140px;
   border: 3px solid black;
 }
 
@@ -190,4 +190,8 @@ input {
 
 .navbar-brand {
   font-size: large !important;
+}
+
+.select-remote {
+  margin: auto;
 }

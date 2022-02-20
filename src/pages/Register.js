@@ -50,8 +50,8 @@ const Register = () => {
           <input type="password" placeholder='confirm password' name='confirmPassword' className='register-box' onChange={(e) => setConfirmPassword(e.target.value)}/>
           <h4 className='register-hid'>Hardware ID :</h4>
           <input type="text" placeholder='hardware ID' name='hardwareId' className='register-box' onChange={(e) => setHardwareId(e.target.value)}/>
+          <button className='btn-register' type='submit'>Register</button>     
         </form>          
-        <button className='btn-register' type='submit'>Register</button>     
       </div>
     </div>
   )
