@@ -46,7 +46,7 @@ const Home = () => {
 
   const onToggleRemote = (id) => {
     sendRemoteAction(id).then(() => {
-
+      setRemotes(remotes => remotes.filter((remote) => remote.remoteId === id))
     })
   }
 
@@ -61,6 +61,7 @@ const Home = () => {
               remote={remote}
               onToggle={onToggleRemote}
               onDelete={onDeleteRemote}
+              state={remote.structure[0].state}
             />
         ))}
       </div>
