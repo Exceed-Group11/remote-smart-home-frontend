@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.05e808d7.css",
-    "main.js": "/static/js/main.ffa9a73f.js",
-    "static/js/787.d7aa1f15.chunk.js": "/static/js/787.d7aa1f15.chunk.js",
-    "index.html": "/index.html",
-    "main.05e808d7.css.map": "/static/css/main.05e808d7.css.map",
-    "main.ffa9a73f.js.map": "/static/js/main.ffa9a73f.js.map",
-    "787.d7aa1f15.chunk.js.map": "/static/js/787.d7aa1f15.chunk.js.map"
+    "main.css": "/remote-smart-home-frontend/static/css/main.05e808d7.css",
+    "main.js": "/remote-smart-home-frontend/static/js/main.d7e18718.js",
+    "static/js/787.d7aa1f15.chunk.js": "/remote-smart-home-frontend/static/js/787.d7aa1f15.chunk.js",
+    "index.html": "/remote-smart-home-frontend/index.html",
+    "main.05e808d7.css.map": "/remote-smart-home-frontend/static/css/main.05e808d7.css.map",
+    "main.d7e18718.js.map": "/remote-smart-home-frontend/static/js/main.d7e18718.js.map",
+    "787.d7aa1f15.chunk.js.map": "/remote-smart-home-frontend/static/js/787.d7aa1f15.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.05e808d7.css",
-    "static/js/main.ffa9a73f.js"
+    "static/js/main.d7e18718.js"
   ]
 }
